@@ -291,6 +291,7 @@ function IngredientsGrid() {
      "/assets/ing/ing1.jpg",
      "/assets/ing/ing2.jpg",
      "/assets/ing/ing3.jpg",
+     "/assets/ing/ing4.jpg"
   ];
   return (
     <Section id="ingredients" className="pt-2 pb-14">
