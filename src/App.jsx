@@ -176,7 +176,7 @@ function Hero() {
 
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <img src="/assets/icons/icon1.png" alt="安全保障" className="h-6 object-contain" />
-              <img src="/assets/icons/icon2.png" alt="天然由来" className="h-6 object-contain" />
+              //<img src="/assets/icons/icon2.png" alt="天然由来" className="h-6 object-contain" />
               <img src="/assets/icons/icon3.png" alt="お客様満足" className="h-6 object-contain" />
             </div>
 
@@ -370,6 +370,10 @@ function Process() {
           </li>
         ))}
       </ol>
+       <img
+        src="/assets/icons/icons1.jpg"
+        alt="アイコン1"
+        className="mx-auto mt-8 w-32 h-auto"
     </Section>
   );
 }
