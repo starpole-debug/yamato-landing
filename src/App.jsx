@@ -269,18 +269,33 @@ function Quality() {
   return (
     <Section id="quality" className="py-16">
       <h2 className="text-2xl font-bold mb-6">品質へのこだわり</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {items.map((it, i) => (
-          <Card key={i} className="transition-transform hover:-translate-y-0.5 hover:shadow-md">
-            <CardHeader>
-              <CardTitle className="text-lg flex items-center gap-2">{it.icon}{it.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-neutral-700">{it.desc}</p>
-            </CardContent>
-          </Card>
-        ))}
+
+      {/* === 修改点：左侧长图 + 右侧三卡片（两栏布局） === */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        {/* 左侧长图：可替换为你的长图路径 */}
+        <div className="flex justify-center">
+          <img
+            src="/assets/ing/ing1.jpg"
+            alt="品質イメージ"
+            className="rounded-2xl shadow-md max-h-[600px] w-auto object-contain"
+          />
+        </div>
+
+        {/* 右侧三卡片（保持原有三项内容） */}
+        <div className="grid grid-cols-1 gap-6">
+          {items.map((it, i) => (
+            <Card key={i} className="transition-transform hover:-translate-y-0.5 hover:shadow-md">
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center gap-2">{it.icon}{it.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-neutral-700">{it.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
+      {/* === 修改点结束 === */}
     </Section>
   );
 }
@@ -370,11 +385,16 @@ function Process() {
           </li>
         ))}
       </ol>
-       <img
-        src="/assets/icons/icons1.jpg"
-        alt="アイコン1"
-        className="mx-auto mt-8 w-32 h-auto"
-         />
+
+      {/* === 修改点：流程图放在步骤列表下方 === */}
+      <div className="mt-10 flex justify-center">
+        <img
+          src="/assets/ing/ing3.jpg"
+          alt="フロー図"
+          className="max-w-full md:max-w-3xl rounded-xl shadow"
+        />
+      </div>
+      {/* === 修改点结束 === */}
     </Section>
   );
 }
