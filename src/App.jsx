@@ -374,6 +374,7 @@ function Process() {
         src="/assets/icons/icons1.jpg"
         alt="アイコン1"
         className="mx-auto mt-8 w-32 h-auto"
+         />
     </Section>
   );
 }
