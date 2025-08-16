@@ -129,11 +129,11 @@ function Hero() {
       <div className="pointer-events-none absolute -top-32 right-[-10%] h-[420px] w-[420px] -z-10 rounded-full blur-3xl bg-emerald-300/40"/>
       <div className="pointer-events-none absolute -bottom-16 left-[-10%] h-[360px] w-[360px] -z-10 rounded-full blur-3xl bg-teal-300/40"/>
 
-      <motion.div
+      {/*<motion.div
         aria-hidden
         className="absolute inset-x-0 top-0 h-[52svh] -z-10 bg-center bg-cover"
-        style={{ backgroundImage: "url('public/assets/hero/hero-bg.jpg')", y }}
-      >
+        style={{ backgroundImage: "url('assets/hero/hero-bg.jpg')", y }}
+        >*/}
         <div className="absolute inset-0 bg-gradient-to-b from-white/75 via-emerald-50/40 to-emerald-50/0"/>
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <span className="absolute -left-1/3 top-0 h-full w-1/3 bg-gradient-to-r from-transparent via-white/20 to-transparent" style={{ animation: "sheen 6s linear infinite" }}/>
