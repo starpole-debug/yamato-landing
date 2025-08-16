@@ -35,8 +35,7 @@ const fade = {
   show: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
 };
 
-// Global background (using online placeholder image)
-const GLOBAL_BG = "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop";
+// Global background (using local asset)
 function GlobalBackground() {
   return (
     <div aria-hidden className="fixed inset-0 -z-50">
@@ -122,24 +121,25 @@ function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 120]);
 
   return (
-    <><div id="top" className="relative isolate overflow-x-clip">
-      <div className="absolute inset-0 -z-20 bg-gradient-to-b from-emerald-50 via-emerald-100/70 to-white" />
-      <div className="absolute inset-0 -z-10 opacity-40 bg-[linear-gradient(90deg,rgba(16,185,129,0.08)_1px,transparent_1px),linear-gradient(rgba(16,185,129,0.08)_1px,transparent_1px)] bg-[size:24px_24px]" />
+    <div id="top" className="relative isolate overflow-x-clip">
+      <div className="absolute inset-0 -z-20 bg-gradient-to-b from-emerald-50 via-emerald-100/70 to-white"/>
+      <div className="absolute inset-0 -z-10 opacity-40 bg-[linear-gradient(90deg,rgba(16,185,129,0.08)_1px,transparent_1px),linear-gradient(rgba(16,185,129,0.08)_1px,transparent_1px)] bg-[size:24px_24px]"/>
 
-      <div className="pointer-events-none absolute -top-32 right-[-10%] h-[420px] w-[420px] -z-10 rounded-full blur-3xl bg-emerald-300/40" />
-      <div className="pointer-events-none absolute -bottom-16 left-[-10%] h-[360px] w-[360px] -z-10 rounded-full blur-3xl bg-teal-300/40" />
+      <div className="pointer-events-none absolute -top-32 right-[-10%] h-[420px] w-[420px] -z-10 rounded-full blur-3xl bg-emerald-300/40"/>
+      <div className="pointer-events-none absolute -bottom-16 left-[-10%] h-[360px] w-[360px] -z-10 rounded-full blur-3xl bg-teal-300/40"/>
 
       <motion.div
         aria-hidden
         className="absolute inset-x-0 top-0 h-[52svh] -z-10 bg-center bg-cover"
+        style={{ backgroundImage: "url('/assets/hero/hero-bg.jpg')", y }}
       >
+        <div className="absolute inset-0 bg-gradient-to-b from-white/75 via-emerald-50/40 to-emerald-50/0"/>
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <span className="absolute -left-1/3 top-0 h-full w-1/3 bg-gradient-to-r from-transparent via-white/20 to-transparent" style={{ animation: "sheen 6s linear infinite" }}/>
+        </div>
       </motion.div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-white/75 via-emerald-50/40 to-emerald-50/0" />
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <span className="absolute -left-1/3 top-0 h-full w-1/3 bg-gradient-to-r from-transparent via-white/20 to-transparent" style={{ animation: "sheen 6s linear infinite" }} />
-      </div>
-    </motion.div><div className="pointer-events-none absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 -z-10">
         {[...Array(8)].map((_, i) => (
           <span
             key={i}
@@ -150,13 +150,16 @@ function Hero() {
               width: 8 + (i % 3) * 4,
               height: 8 + (i % 3) * 4,
               animation: `float ${8 + (i % 5)}s ease-in-out ${i * 0.8}s infinite alternate`,
-            }} />
+            }}
+          />
         ))}
-      </div><Section id="hero" className="pt-10 pb-14 sm:pt-16 sm:pb-20">
+      </div>
+
+      <Section id="hero" className="pt-10 pb-14 sm:pt-16 sm:pb-20">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-center">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border bg-white/70 backdrop-blur px-3 py-1 text-xs text-neutral-600 shadow-sm">
-              <Sparkles className="h-3.5 w-3.5" />
+              <Sparkles className="h-3.5 w-3.5"/>
               <span>厳選された、最高品質をお届けします</span>
             </div>
             <h1 className="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold tracking-tight">
@@ -167,14 +170,14 @@ function Hero() {
               天然の漢方薬材を活用した目の下のたるみケアをお届けします。
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="#contact"><ShinyButton>無料相談 <ChevronRight className="ml-1 h-4 w-4" /></ShinyButton></a>
+              <a href="#contact"><ShinyButton>無料相談 <ChevronRight className="ml-1 h-4 w-4"/></ShinyButton></a>
               <a href="#principle"><Button className="rounded-2xl border bg-white hover:bg-neutral-50">漢方の原理を見る</Button></a>
             </div>
 
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <img src="/assets/icons/icon1.png" alt="安全保障" className="h-6 object-contain" />
               <img src="/assets/icons/icon2.png" alt="天然由来" className="h-6 object-contain" />
-              <img src="public/assets/icons/icon3.png" alt="お客様満足" className="h-6 object-contain" />
+              <img src="/assets/icons/icon3.png" alt="お客様満足" className="h-6 object-contain" />
             </div>
 
             <div className="grid grid-cols-3 max-w-md gap-4 pt-4">
@@ -193,30 +196,32 @@ function Hero() {
 
           <motion.div variants={fade} initial="hidden" animate="show" className="grid grid-cols-2 gap-4">
             <div className="col-span-1 aspect-[4/3] overflow-hidden rounded-3xl shadow-xl relative bg-white transition-transform duration-300 will-change-transform hover:-translate-y-0.5">
-              <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Herbal details" className="h-full w-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Herbal details" className="h-full w-full object-cover"/>
               <div className="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-emerald-600 text-white text-xs px-2 py-1 shadow">
-                <Leaf className="h-3.5 w-3.5" /> 天然由来
+                <Leaf className="h-3.5 w-3.5"/> 天然由来
               </div>
             </div>
             <div className="col-span-1 grid gap-4">
               <div className="aspect-[4/3] rounded-3xl border bg-white p-4 shadow-sm flex items-center transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-md">
                 <div className="space-y-1">
-                  <div className="font-semibold flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-emerald-700" /> 徹底した品質管理</div>
+                  <div className="font-semibold flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-emerald-700"/> 徹底した品質管理</div>
                   <p className="text-xs text-neutral-600">原料の選定〜製造管理まで、厳格な基準を採用。</p>
                 </div>
               </div>
               <div className="aspect-[4/3] rounded-3xl border bg-gradient-to-br from-emerald-50 to-teal-50 p-4 shadow-sm flex items-center transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-md">
                 <div className="space-y-1">
-                  <div className="font-semibold flex items-center gap-2"><Droplets className="h-4 w-4 text-emerald-700" /> 外用経皮技術</div>
+                  <div className="font-semibold flex items-center gap-2"><Droplets className="h-4 w-4 text-emerald-700"/> 外用経皮技術</div>
                   <p className="text-xs text-neutral-600">有効成分を角層まで素早く・やさしく浸透。</p>
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
-      </Section><div aria-hidden className="-mt-6 text-emerald-50">
-        <svg viewBox="0 0 1440 100" className="w-full h-12"><path fill="currentColor" d="M0,64L60,69.3C120,75,240,85,360,96C480,107,600,117,720,106.7C840,96,960,64,1080,53.3C1200,43,1320,53,1380,58.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z" /></svg>
-      </div></>
+      </Section>
+
+      <div aria-hidden className="-mt-6 text-emerald-50">
+        <svg viewBox="0 0 1440 100" className="w-full h-12"><path fill="currentColor" d="M0,64L60,69.3C120,75,240,85,360,96C480,107,600,117,720,106.7C840,96,960,64,1080,53.3C1200,43,1320,53,1380,58.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"/></svg>
+      </div>
     </div>
   );
 }
@@ -373,7 +378,7 @@ function Results() {
   const items = [
     { combined: "/assets/ba/combined_1.jpg", caption: "28日使用後" },
     { combined: "/assets/ba/combined_2.jpg", caption: "36日使用後" },
-    { combined: "/assets/ba/combined_3.jpg", caption: "45か月使用後" },
+    { combined: "/assets/ba/combined_3.jpg", caption: "45日使用後" },
   ];
   return (
     <Section id="results" className="py-16">
