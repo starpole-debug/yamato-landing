@@ -288,7 +288,7 @@ function Quality() {
         {/* 左侧长图：可替换为你的长图路径 */}
         <div className="flex justify-center">
           <img
-            src="/assets/icons/icon1.png"
+            src="/assets/icons/icon3.png"
             alt="品質イメージ"
             className="rounded-2xl shadow-md max-h-[600px] w-auto object-contain"
           />
@@ -402,7 +402,7 @@ function Process() {
       {/* === 修改点：流程图放在步骤列表下方 === */}
       <div className="mt-10 flex justify-center">
         <img
-          src="/assets/icons/icon3.png"
+          src="/assets/icons/icon1.png"
           alt="フロー図"
           className="max-w-full md:max-w-3xl rounded-xl shadow"
         />
