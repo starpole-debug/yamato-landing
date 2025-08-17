@@ -193,13 +193,25 @@ function Hero() {
             </div>
           </motion.div>
 
+          {/* === 修改点 START === */}
           <motion.div variants={fade} initial="hidden" animate="show" className="grid grid-cols-2 gap-4">
-            <div className="col-span-1 aspect-[4/3] overflow-hidden rounded-3xl shadow-xl relative bg-white transition-transform duration-300 will-change-transform hover:-translate-y-0.5">
-              <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Herbal details" className="h-full w-full object-cover"/>
-              <div className="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-emerald-600 text-white text-xs px-2 py-1 shadow">
-                <Leaf className="h-3.5 w-3.5"/> 天然由来
+            {/* 左侧图片栏（现在包含两张图片） */}
+            <div className="col-span-1 grid gap-4">
+              <div className="aspect-[4/3] overflow-hidden rounded-3xl shadow-xl relative bg-white transition-transform duration-300 will-change-transform hover:-translate-y-0.5">
+                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Herbal details" className="h-full w-full object-cover"/>
+                <div className="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-emerald-600 text-white text-xs px-2 py-1 shadow">
+                  <Leaf className="h-3.5 w-3.5"/> 天然由来
+                </div>
+              </div>
+              <div className="aspect-[4/3] overflow-hidden rounded-3xl shadow-xl relative bg-white transition-transform duration-300 will-change-transform hover:-translate-y-0.5">
+                <img src="assets/ing/ing5.jpg" alt="Ingredient details" className="h-full w-full object-cover"/>
+                <div className="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-emerald-600 text-white text-xs px-2 py-1 shadow">
+                  <Sparkles className="h-3.5 w-3.5"/> パーソナルカスタマイズ
+                </div>
               </div>
             </div>
+
+            {/* 右侧卡片栏（现在包含两张卡片） */}
             <div className="col-span-1 grid gap-4">
               <div className="aspect-[4/3] rounded-3xl border bg-white p-4 shadow-sm flex items-center transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-md">
                 <div className="space-y-1">
@@ -215,6 +227,7 @@ function Hero() {
               </div>
             </div>
           </motion.div>
+          {/* === 修改点 END === */}
         </div>
       </Section>
 
@@ -275,7 +288,7 @@ function Quality() {
         {/* 左侧长图：可替换为你的长图路径 */}
         <div className="flex justify-center">
           <img
-            src="/assets/ing/ing1.jpg"
+            src="/assets/icons/icon1.png"
             alt="品質イメージ"
             className="rounded-2xl shadow-md max-h-[600px] w-auto object-contain"
           />
@@ -389,7 +402,7 @@ function Process() {
       {/* === 修改点：流程图放在步骤列表下方 === */}
       <div className="mt-10 flex justify-center">
         <img
-          src="/assets/ing/ing3.jpg"
+          src="/assets/icons/icon3.png"
           alt="フロー図"
           className="max-w-full md:max-w-3xl rounded-xl shadow"
         />
