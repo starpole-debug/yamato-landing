@@ -516,7 +516,7 @@ function Footer() {
   return (
     <footer className="mt-16 border-t">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 text-xs text-neutral-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div>© {new Date().getFullYear()} 大和株式会社</div>
+        <div>© 大和株式会社</div>
         <div className="flex items-center gap-3">
           <a href="#about" className="hover:text-neutral-800">会社概要</a>
           <span>・</span>
