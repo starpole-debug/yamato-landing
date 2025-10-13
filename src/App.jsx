@@ -414,9 +414,9 @@ function Process() {
 
 function Results() {
   const items = [
-    { combined: "/assets/ba/combined_1.jpg", caption: "28日使用後" },
-    { combined: "/assets/ba/combined_2.jpg", caption: "36日使用後" },
-    { combined: "/assets/ba/combined_3.jpg", caption: "45日使用後" },
+    { combined: "/assets/ba/aboutmenu_case_figure-01.png", caption: "28日使用後" },
+    { combined: "/assets/ba/aboutmenu_case_figure-02.png", caption: "36日使用後" },
+    { combined: "/assets/ba/aboutmenu_case_figure-03.png", caption: "45日使用後" },
   ];
   return (
     <Section id="results" className="py-16">
