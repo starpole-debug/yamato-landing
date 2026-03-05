@@ -487,9 +487,6 @@ function Company() {
             <dt className="col-span-1 text-neutral-500">事業内容</dt>
             <dd className="col-span-3">化粧品、美容器具、健康器具、健康食品、医療品、医薬品原料、香辛料、薫香原料の輸入及び販売</dd>
 
-            <dt className="col-span-1 text-neutral-500">資本金</dt>
-            <dd className="col-span-3">金1600万円</dd>
-
             <dt className="col-span-1 text-neutral-500">連絡先</dt>
             <dd className="col-span-3 flex items-center gap-2">
               <Mail className="h-4 w-4"/> <a href="mailto:ogura0916@gaogze.com" className="underline">ogura0916@gaogze.com</a>
