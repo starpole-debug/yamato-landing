@@ -97,7 +97,7 @@ function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
         <a href="#top" className="flex items-center gap-2">
           <div className="h-7 w-7 rounded-full bg-emerald-600 shadow-[0_0_0_3px_rgba(16,185,129,.2)]" />
-          <span className="font-semibold tracking-wide">大和株式会社</span>
+          <span className="font-semibold tracking-wide">大喜株式会社</span>
         </a>
         <nav className="hidden md:flex items-center gap-6 text-neutral-700">
           <NavLink href="#about">私たちについて</NavLink>
@@ -166,7 +166,7 @@ function Hero() {
               自然の力で、目元から美しさを。
             </h1>
             <p className="text-neutral-700">
-              大和株式会社は、漢方薬原料・薫香原料・香辛料・食品原料・中華食材・中国茶などを輸入し、
+              大喜株式会社は、漢方薬原料・薫香原料・香辛料・食品原料などを輸入し、
               天然の漢方薬材を活用した目の下のたるみケアをお届けします。
             </p>
             <div className="flex flex-wrap gap-3">
@@ -244,9 +244,9 @@ function About() {
       <div className="pointer-events-none absolute -top-8 right-0 h-40 w-40 rounded-full blur-2xl bg-emerald-300/30"/>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
         <div className="md:col-span-2 space-y-4">
-          <h2 className="text-2xl font-bold">大和株式会社とは</h2>
+          <h2 className="text-2xl font-bold">大喜株式会社とは</h2>
           <p className="text-neutral-700">
-            2002年の創業以来、当社は天然の漢方薬材を活用し、目の下のたるみ（眼袋）のお悩みに向き合ってきました。
+            2002年の創業以来、当社は天然の漢方薬材を活用し、目の下のたるみのお悩みに向き合ってきました。
             これまでに世界中で20万人以上のお客様へ一対一のケアソリューションを提供し、高いご満足をいただいています。
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -265,7 +265,7 @@ function About() {
         <div className="rounded-2xl border bg-white p-6 shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md">
           <h3 className="font-semibold mb-2">取り扱い分野</h3>
           <p className="text-sm text-neutral-700">
-            漢方薬原料、薫香原料、香辛料、食品原料、中華食材、中国茶、化粧品、美容器具、健康器具、健康食品、医療品、医薬品原料の輸入・販売
+            漢方薬原料、薫香原料、香辛料、食品原料、化粧品、美容器具、健康器具、健康食品、医療品、医薬品原料の輸入・販売
           </p>
         </div>
       </div>
@@ -482,7 +482,7 @@ function Company() {
           <h2 className="text-2xl font-bold mb-4">会社情報</h2>
           <dl className="grid grid-cols-4 gap-x-4 gap-y-3 text-sm">
             <dt className="col-span-1 text-neutral-500">社名</dt>
-            <dd className="col-span-3">大和株式会社</dd>
+            <dd className="col-span-3">大喜株式会社</dd>
 
             <dt className="col-span-1 text-neutral-500">事業内容</dt>
             <dd className="col-span-3">化粧品、美容器具、健康器具、健康食品、医療品、医薬品原料、香辛料、薫香原料の輸入及び販売</dd>
@@ -516,7 +516,7 @@ function Footer() {
   return (
     <footer className="mt-16 border-t">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 text-xs text-neutral-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div>© 大和株式会社</div>
+        <div>© 大喜株式会社</div>
         <div className="flex items-center gap-3">
           <a href="#about" className="hover:text-neutral-800">会社概要</a>
           <span>・</span>
