@@ -422,7 +422,7 @@ function Results() {
     <Section id="results" className="py-16">
       <div className="flex items-end justify-between mb-4">
         <h2 className="text-2xl font-bold">Before / After</h2>
-        <span className="text-sm text-neutral-500">※個人差があります。</span>
+        <span className="text-sm text-neutral-50"> </span>
       </div>
       <div className="group relative">
         <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 no-scrollbar" style={{scrollbarWidth: "none"}}>
@@ -454,7 +454,7 @@ function Testimonials() {
     <Section id="testimonials" className="py-16">
       <div className="flex items-end justify-between mb-4">
         <h2 className="text-2xl font-bold">お客様の声</h2>
-        <span className="text-sm text-neutral-500">※個人の感想であり、効果を保証するものではありません。</span>
+        <span className="text-sm text-neutral-500"></span>
       </div>
       <div className="group relative">
         <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 no-scrollbar" style={{scrollbarWidth: "none"}}>
